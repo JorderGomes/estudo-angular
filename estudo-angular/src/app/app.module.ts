@@ -8,6 +8,8 @@ import { CardGridComponent } from './components/card-grid/card-grid.component';
 import { DirectivesComponent } from './components/directives/directives.component';
 import { IfRenderComponent } from './components/if-render/if-render.component';
 import { EventsComponent } from './components/events/events.component';
+import { EmiterComponent } from './components/emiter/emiter.component';
+import { ChangeNumberComponent } from './components/change-number/change-number.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +18,9 @@ import { EventsComponent } from './components/events/events.component';
     CardGridComponent,
     DirectivesComponent,
     IfRenderComponent,
-    EventsComponent
+    EventsComponent,
+    EmiterComponent,
+    ChangeNumberComponent
   ],
   imports: [
     BrowserModule,
