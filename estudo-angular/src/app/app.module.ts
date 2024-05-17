@@ -7,6 +7,7 @@ import { CardComponent } from './components/card/card.component';
 import { CardGridComponent } from './components/card-grid/card-grid.component';
 import { DirectivesComponent } from './components/directives/directives.component';
 import { IfRenderComponent } from './components/if-render/if-render.component';
+import { EventsComponent } from './components/events/events.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { IfRenderComponent } from './components/if-render/if-render.component';
     CardComponent,
     CardGridComponent,
     DirectivesComponent,
-    IfRenderComponent
+    IfRenderComponent,
+    EventsComponent
   ],
   imports: [
     BrowserModule,
