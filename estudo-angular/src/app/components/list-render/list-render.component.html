@@ -11,13 +11,15 @@
             </tr>
         </thead>
         <tbody>
-            <tr *ngFor="let record of records">
-                <td>{{record.id}}</td>
-                <td>{{record.description}}</td>
-                <td>{{record.value}}</td>
-                <td>{{record.flux}}</td>
-                <td>{{record.tag}}</td>
+            <tr *ngFor="let register of registers">
+                <td>{{register.id}}</td>
+                <td>{{register.description}}</td>
+                <td>{{register.value}}</td>
+                <td>{{register.flux}}</td>
+                <td>{{register.tag}}</td>
             </tr>
         </tbody>
     </table>
+    <h3>O saldo final é de {{ balance }}</h3>
+    <button (click)="showBalance()">Calcular saldo</button>
 </div>
