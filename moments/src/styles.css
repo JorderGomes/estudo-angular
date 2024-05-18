@@ -1,1 +1,22 @@
-/* You can add global styles to this file, and also import other style files */
+:root{
+    --primary-text-color: #444;
+    --primary-color: #dec129;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: Cambria, sans-serif;
+    box-sizing: border-box;
+    color: var(--primary-text-color);
+}
+
+a {
+    text-decoration: none;
+    color: var(--primary-text-color);
+    transition: .4s;
+}
+
+a:hover {
+    color: var(--primary-color);
+}
