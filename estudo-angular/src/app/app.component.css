@@ -1,3 +1,9 @@
 body {
     background-color: #ccc;
 }
+
+#nav-bar{
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+}

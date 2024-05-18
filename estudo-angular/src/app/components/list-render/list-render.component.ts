@@ -88,6 +88,7 @@ export class ListRenderComponent {
     }
 
     showBalance() {
+        this.balance = 0;
         this.registers.forEach(item => {
             if (item.flux === "DESPESA") {
                 this.balance -= item.value;
