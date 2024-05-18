@@ -20,4 +20,8 @@ export class ListService {
     return this.http.get<Register[]>(this.apiUrl);
   }
 
+  getItem(id: number): Observable<Register>{
+    return this.http.get<Register>(`${this.apiUrl}/${id}`)
+  }
+
 }

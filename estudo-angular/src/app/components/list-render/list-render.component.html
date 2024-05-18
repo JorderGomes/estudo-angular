@@ -14,7 +14,7 @@
         <tbody>
             <tr *ngFor="let register of registers">
                 <td>{{register.id}}</td>
-                <td>{{register.description}}</td>
+                <td><a routerLink="/list/{{register.id}}">{{register.description}}</a></td>
                 <td>{{register.value}}</td>
                 <td>{{register.flux}}</td>
                 <td>{{register.tag}}</td>
