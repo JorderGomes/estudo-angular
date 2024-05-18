@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { Register } from '../../Register';
-
+import { ListService } from '../../services/list.service';
 
 @Component({
     selector: 'app-list-render',
@@ -83,6 +83,10 @@ export class ListRenderComponent {
         }
     ];
 
+    constructor(private listService: ListService){
+
+    }
+
     showBalance() {
         this.registers.forEach(item => {
             if (item.flux === "DESPESA") {
@@ -91,6 +95,11 @@ export class ListRenderComponent {
                 this.balance += item.value;
             }
         })
+    }
+
+    removeRegister(register: Register){
+        console.log(`Removendo o registro de ${register.description}`);
+        this.registers = this.listService.remove(this.registers, register);
     }
 
 }

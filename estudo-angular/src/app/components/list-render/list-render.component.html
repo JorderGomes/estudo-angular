@@ -8,6 +8,7 @@
                 <th>value</th>
                 <th>flux</th>
                 <th>tag</th>
+                <th>Remover</th>
             </tr>
         </thead>
         <tbody>
@@ -17,6 +18,7 @@
                 <td>{{register.value}}</td>
                 <td>{{register.flux}}</td>
                 <td>{{register.tag}}</td>
+                <td><button (click)="removeRegister(register)">Remover</button></td>
             </tr>
         </tbody>
     </table>
