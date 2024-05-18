@@ -1,0 +1,16 @@
+<div class="aula">
+    <h2>Two way data biding</h2>
+    <form>
+        <input 
+            type="text" 
+            [(ngModel)]="description" 
+            name="description" 
+            placeholder="Descreva a transação"
+        />
+        <br>
+        <br>
+        <input type="submit" value="Enviar">
+    </form>
+    <br>
+    <p *ngIf="description !== ''">A descrição é {{ description }}</p>
+</div>
