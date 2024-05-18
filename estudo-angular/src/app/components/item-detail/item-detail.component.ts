@@ -20,7 +20,7 @@ export class ItemDetailComponent {
     const id = Number(this.route.snapshot.paramMap.get("id"));
     this.listService.getItem(id).subscribe((register) => {
       console.log(register);
-      this.register = register[0];
+      this.register = register;
     });
   }
 }

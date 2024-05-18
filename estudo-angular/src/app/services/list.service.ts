@@ -12,16 +12,16 @@ export class ListService {
 
   constructor(private http: HttpClient) { }
 
-  remove(registers: Register[], register: Register){
-    return registers.filter((r) => register.id !== r.id);
+  remove(id: number){
+    return this.http.delete<Register>(`${this.apiUrl}/${id}`);
   }
 
   getAll(): Observable<Register[]>{
     return this.http.get<Register[]>(this.apiUrl);
   }
 
-  getItem(id: number): Observable<Register[]>{
-    return this.http.get<Register[]>(`${this.apiUrl}?id=${id}`)
+  getItem(id: number): Observable<Register>{
+    return this.http.get<Register>(`${this.apiUrl}/${id}`)
   }
 
 }

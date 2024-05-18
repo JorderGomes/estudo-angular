@@ -28,8 +28,8 @@ export class ListRenderComponent {
     }
 
     removeRegister(register: Register){
-        console.log(`Removendo o registro de ${register.description}`);
-        this.registers = this.listService.remove(this.registers, register);
+        this.registers = this.registers.filter((r) => register.id !== r.id);
+        this.listService.remove(register.id).subscribe();
     }
 
     getRegisters(): void{
