@@ -18,6 +18,9 @@ export class ItemDetailComponent {
 
   getRegister() {
     const id = Number(this.route.snapshot.paramMap.get("id"));
-    this.listService.getItem(id).subscribe((register) => this.register = register);
+    this.listService.getItem(id).subscribe((register) => {
+      console.log(register);
+      this.register = register[0];
+    });
   }
 }
