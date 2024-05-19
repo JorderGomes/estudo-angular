@@ -1,6 +1,8 @@
 :root{
     --primary-text-color: #444;
     --primary-color: #dec129;
+    --gray-700: #777;
+    --light-background-color: #efefef;
 }
 
 * {
