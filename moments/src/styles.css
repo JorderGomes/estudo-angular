@@ -1,5 +1,6 @@
 :root{
     --primary-color: #dec129;
+    --secondary-color: #007bff;
     --primary-text-color: #444;
     --error: #dc3545;
     --gray-700: #777;
@@ -71,4 +72,40 @@ input[type="submit"]:hover {
     margin-top: .4em;
     border-left: 3px solid var(--error);
     padding-left: .2em;
+}
+
+/* buttons */
+
+.edit-btn, .remove-btn {
+    border: 1px solid var(--light-background-color);
+    padding: .4em 1em;
+    font-size: 1em;
+    margin: 0 .5em;
+    cursor: pointer;
+    background-color: #fff;
+    transition: .4s;
+}
+
+button fa-icon, a fa-icon {
+    margin-right: .2em;
+}
+
+.edit-btn, .edit-btn path {
+    border-color: var(--secondary-color);
+    color: var(--secondary-color);
+}
+
+.edit-btn:hover, .edit-btn:hover path {
+    background-color: var(--secondary-color);
+    color: #fff;
+}
+
+.remove-btn, .remove-btn path {
+    border-color: var(--error);
+    color: var(--error);
+}
+
+.remove-btn:hover, .remove-btn:hover path {
+    background-color: var(--error);
+    color: #fff;
 }
