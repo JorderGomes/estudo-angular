@@ -14,12 +14,12 @@ export class EditMomentComponent {
   moment!: Moment;
   btnText: string = 'Editar';
 
-  constructor (
+  constructor(
     private momentService: MomentService,
     private route: ActivatedRoute,
     private messagesService: MessagesService,
     private router: Router,
-  ){}
+  ) { }
 
   ngOnInit(): void {
     const id = Number(this.route.snapshot.paramMap.get("id"));
@@ -28,14 +28,14 @@ export class EditMomentComponent {
     });
   }
 
-  async editHandler(momentData: Moment){
+  async editHandler(momentData: Moment) {
     const id = this.moment.id;
     const formData = new FormData();
 
     formData.append('title', momentData.title);
     formData.append('description', momentData.description);
 
-    if (momentData.image){
+    if (momentData.image) {
       formData.append('image', momentData.image);
     }
 
@@ -43,6 +43,7 @@ export class EditMomentComponent {
 
     this.messagesService.addMessage("Momento atualizado com sucesso!");
 
+    
     this.router.navigate(["/"]);
 
   }

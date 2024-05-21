@@ -3,25 +3,31 @@ import { MomentService } from '../../../services/moment.service';
 import { Moment } from '../../../moment';
 import { enviroment } from '../../../../enviroments/enviroment';
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
+import { ActivatedRoute, Router } from '@angular/router';
+import { OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
 })
-export class HomeComponent {
+export class HomeComponent implements OnInit {
 
   allMoments: Moment[] = [];
   moments: Moment[] = [];
   baseApiUrl = enviroment.baseApiUrl;
   faSearch = faSearch;
-  searchTerm:string = '';
+  searchTerm: string = '';
 
   //todo: search
 
   constructor(
-    private momentService: MomentService
-  ) { }
+    private momentService: MomentService,
+    private route: ActivatedRoute,
+    private router: Router
+  ) {
+    
+  }
 
   ngOnInit(): void {
     this.momentService.getMoments().subscribe((items) => {
@@ -32,7 +38,7 @@ export class HomeComponent {
       }
 
       this.allMoments = items.data;
-      this.moments = data;
+      this.moments = items.data;
     });
   }
 
@@ -41,13 +47,13 @@ export class HomeComponent {
     // const brazilianFormatRegex = /^\d{2}\/\d{2}\/\d{4}, \d{2}:\d{2}:\d{2}$/;
     if (americanFormatRegex.test(date)) {
       return new Date(date).toLocaleString('pt-BR')
-    } else  {
+    } else {
       const [datePart, timePart] = date.split(', ');
       return datePart;
     }
   }
 
-  search(e: Event): void{
+  search(e: Event): void {
     const target = e.target as HTMLInputElement;
     const value = target.value;
 
