@@ -12,7 +12,7 @@ export class MessagesService {
 
     setTimeout(() => {
       this.clear();
-    }, 5000)
+    }, 3000)
   }
 
   clear(){
