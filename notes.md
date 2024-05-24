@@ -1,16 +1,21 @@
-# criação projeto
+# Criação projeto
 
 ```markdown
 ng new app-name --no-standalone
 ```
 
-# criação de componente
+# Criação de componente
 
 ```markdown
-ng generate component components/card
+ng generate component components/name
 ```
 
-# rodar api
+# Criação service
+```Markdown
+ng generate service services/name
+```
+
+# Rodar api
 
 ```markdown
 node ace serve
