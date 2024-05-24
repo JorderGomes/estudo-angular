@@ -15,6 +15,11 @@ ng generate component components/name
 ng generate service services/name
 ```
 
+# Mock de api
+```Markdown
+npm run server
+```
+
 # Rodar api
 
 ```markdown
